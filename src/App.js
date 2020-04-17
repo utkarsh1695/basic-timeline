@@ -43,6 +43,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="container">
+        <h1>State will change every 10 seconds</h1>
         <ul className="stepper">
           <li className={`step ${this.getStatusClass(0)} first`}>
               <div className="header" onClick={() => this.toggle(0)}>HEADER</div>
