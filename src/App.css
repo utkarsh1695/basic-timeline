@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+.container {
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.stepper {
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.step {
+  position: relative;
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.step::after {
+  content: "";
+  font-size: 30px;
+  position: absolute;
+  top: 25px;
+  left: -18px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.pending::after {
+  background-color: grey  ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active::after {
+  background-color: lightskyblue;
+}
+
+.completed::after {
+  background-color: skyblue;
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: -16px;
+  width: 5px;
+  height: 100%;
+  z-index: -1;
+}
+
+.last::before {
+  display: none;
+}
+
+.pending::before, .active::before {
+  background-color: lightgray;
+}
+
+.completed::before {
+  background-color: lightskyblue;
+}
+
+.header {
+  padding: 20px;
+}
+
+.content {
+  margin-top: 10px;
 }
