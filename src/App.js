@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./App.css";
+import MaterialInput from './material-input';
 
 export default class App extends Component {
   constructor() {
@@ -19,7 +20,7 @@ export default class App extends Component {
       })
     }, 10000);
   }
-  
+
   componentWillUnmount() {
     clearInterval(this.set);
   }
@@ -38,7 +39,7 @@ export default class App extends Component {
       default: return "pending"
     }
   }
-  
+
 
   render() {
     return (
@@ -46,7 +47,7 @@ export default class App extends Component {
         <h1>State will change every 10 seconds</h1>
         <ul className="stepper">
           <li className={`step ${this.getStatusClass(0)} first`}>
-              <div className="header" onClick={() => this.toggle(0)}>HEADER</div>
+            <div className="header" onClick={() => this.toggle(0)}>HEADER</div>
             {
               this.state.openState === 0 && this.state.isOpen && <div className="content">CONTENT</div>
             }
@@ -64,6 +65,11 @@ export default class App extends Component {
             }
           </li>
         </ul>
+
+
+
+
+        <MaterialInput />
       </div>
     )
   }

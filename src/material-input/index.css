@@ -1,0 +1,38 @@
+.m__container {
+  position: relative;
+  padding: 20px 10px;
+  border: 1px solid grey;
+}
+
+.m__focused {
+  border-color: red;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  position: absolute;
+  font-size: 18px;
+  color: grey;
+  z-index: 2;
+  background: transparent;
+  bottom: 0;
+  left: 0;
+}
+
+.m__title {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 100%;
+  transition: all 0.3s;
+  font-size: 18px;
+  color: grey;
+}
+
+.m__title.m__move {
+  top: 0;
+  left: 2px;
+  font-size: 12px;
+  color: blue;
+}
